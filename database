@@ -1,9 +1,12 @@
-CREATE DATABASE student_planner;
+CREATE DATABASE courseplanner;
+USE courseplanner;
 
 CREATE TABLE users (
-	id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) UNIQUE NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
     password_hash VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+INSERT INTO users (username, email) VALUES ('Frank Glaser', 'fglaser@stevens.edu');
